@@ -1,0 +1,35 @@
+<!ELEMENT audioArch (storeInfo, songs, footer)>
+
+<!ELEMENT storeInfo (storeLogo, storeName, storeAddress, storeContact, storeWebsite, storeEmail, storeDetails)>
+
+<!ELEMENT storeLogo EMPTY>
+<!ELEMENT storeName (#PCDATA)>
+<!ELEMENT storeAddress (#PCDATA)>
+<!ELEMENT storeContact (#PCDATA)>
+<!ELEMENT storeWebsite (#PCDATA)>
+<!ELEMENT storeEmail (#PCDATA)>
+<!ELEMENT storeDetails (#PCDATA)>
+
+<!ELEMENT songs (song+)>
+
+<!ELEMENT song (albumImage, songTitle, artist, featuredArtist?, album, year, genre, director?, producer?, length, writers, award?, studio?, rLabel)>
+<!ELEMENT albumImage EMPTY>
+<!ELEMENT songTitle (#PCDATA)>
+<!ELEMENT artist (#PCDATA)>
+<!ELEMENT featuredArtist (#PCDATA)>
+<!ELEMENT album (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT producer (#PCDATA)>
+<!ELEMENT length (#PCDATA)>
+<!ELEMENT writers (writer+)>
+<!ELEMENT writer (#PCDATA)>
+<!ELEMENT award (#PCDATA)>
+<!ELEMENT studio (#PCDATA)>
+<!ELEMENT rLabel (#PCDATA)>
+
+<!ELEMENT footer (#PCDATA)>
+
+<!ATTLIST song song_id ID #REQUIRED format (digital|physical) #REQUIRED language CDATA #IMPLIED rating CDATA #REQUIRED price CDATA #REQUIRED>
+<!ATTLIST studio location CDATA #IMPLIED>

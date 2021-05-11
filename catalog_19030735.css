@@ -1,0 +1,256 @@
+audioArch {
+	display: flex;
+	flex-direction: column;
+	background-image: url(./BG.png);
+}
+
+storeInfo {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+storeLogo {
+	width: 513px;
+	height: 114px;
+	display: block;
+	margin-top: 50px;
+	background-image: url(Logo.png);
+}
+
+storeName {
+	width: 513px;
+	margin-top: 100px;
+	background-color: #292929;
+	border-radius: 0.5rem 0.5rem 0rem 0rem;
+	color: rgb(255, 255, 255);
+	font-size: 2rem;
+	text-align: center;
+}
+
+storeAddress {
+	width: 513px;
+	padding: 5px 0px;
+	background-color: rgb(255, 255, 255);
+	font-family: sans-serif;
+	text-align: center;
+}
+
+storeContact {
+	width: 513px;
+	padding: 5px 0px;
+	background-color: rgb(245, 245, 245);
+	font-family: monospace;
+	font-size: 1.25rem;
+	text-align: center;
+}
+
+storeWebsite {
+	width: 513px;
+	padding: 5px 0px;
+	background-color: rgb(255, 255, 255);
+	font-family: sans-serif;
+	font-style: italic;
+	text-align: center;
+}
+
+storeEmail {
+	width: 513px;
+	padding: 5px 0px;
+	background-color: rgb(245, 245, 245);
+	font-family: sans-serif;
+	text-decoration: underline;
+	text-align: center;
+}
+
+storeDetails {
+	width: 513px;
+	padding: 5px 0px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 0rem 0rem 0.5rem 0.5rem;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+storeInfo::after {
+	content: url(Explore.png);
+	margin: 20px 0px;
+	cursor: pointer;
+}
+
+songs {
+	width: 90%;
+	min-height: 90vh;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px auto;
+	margin-bottom: 40px;
+}
+
+songs song {
+	width: 255px;
+	display: flex;
+	flex-direction: column;
+	margin: 10px auto;
+	padding: 10px;
+	background-color: aliceblue;
+	border: #292929 solid 1px;
+	border-radius: 0.25rem;
+	font-family: sans-serif;
+}
+
+albumImage {
+	width: 255px;
+	height: 255px;
+	display: block;
+	background-image: url(CD.png);
+}
+
+albumImage:hover {
+	border-radius: 128px;
+	transition: border-radius 100ms;
+}
+
+songTitle {
+	width: 100%;
+	margin-top: 5px;
+	padding: 7px 0px;
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	font-family: sans-serif;
+	font-size: 1.25rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+artist {
+	margin-top: 10px;
+}
+
+artist::before {
+	content: "Artist: ";
+	font-weight: bold;
+}
+
+featuredArtist {
+	margin-top: 5px;
+}
+
+featuredArtist::before {
+	content: "Featuring Artist: ";
+	font-weight: bold;
+}
+
+album {
+	margin-top: 5px;
+}
+
+album::before {
+	content: "Album: ";
+	font-weight: bold;
+}
+
+year {
+	margin-top: 5px;
+}
+
+year::before {
+	content: "Year: ";
+	font-weight: bold;
+}
+
+genre {
+	margin-top: 5px;
+}
+genre::before {
+	content: "Genre: ";
+	font-weight: bold;
+}
+
+director {
+	margin-top: 5px;
+}
+
+director::before {
+	content: "Director: ";
+	font-weight: bold;
+}
+
+producer {
+	margin-top: 5px;
+}
+
+producer::before {
+	content: "Producer: ";
+	font-weight: bold;
+}
+
+length {
+	margin-top: 5px;
+}
+
+length::before {
+	content: "Length: ";
+	font-weight: bold;
+}
+
+writers {
+	margin-top: 5px;
+}
+
+writers::before {
+	content: "Writers:";
+	font-weight: bold;
+}
+
+writer {
+	display: list-item;
+	margin-top: 5px;
+	margin-left: 25px;
+	border-right: #292929 solid 1px;
+	cursor: pointer;
+}
+
+writer:hover {
+	font-weight: bold;
+	border-right-color: rgb(255, 99, 71);
+	transition: all ease-in-out 200ms;
+}
+award {
+	margin-top: 5px;
+}
+
+award::before {
+	content: "Award: ";
+	font-weight: bold;
+}
+
+studio {
+	margin-top: 5px;
+}
+
+studio::before {
+	content: "Studio: ";
+	font-weight: bold;
+}
+
+rLabel {
+	margin-top: 5px;
+}
+
+rLabel::before {
+	content: "Record Label: ";
+	font-weight: bold;
+}
+
+footer {
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	padding: 5px 0px;
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	text-align: center;
+}

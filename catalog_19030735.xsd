@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!-- 
+  Name: Anwesh Dahal
+  Univrsity ID: 19030735
+  Date: April 12 2021
+ -->
+
+ 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Root Element -->
+  <xs:element name="audioArch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="storeInfo" />
+        <xs:element ref="songs" />
+        <xs:element name="footer" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Store Info Element -->
+  <xs:element name="storeInfo" >
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="storeLogo" type="xs:string" />
+        <xs:element name="storeName" type="xs:string" />
+        <xs:element name="storeAddress" type="xs:string" />
+        <xs:element name="storeContact" type="xs:string" />
+        <xs:element name="storeWebsite" type="xs:anyURI" />
+        <xs:element name="storeEmail" type="xs:string" />
+        <xs:element name="storeDetails" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Root element for unbounded number of song element -->
+  <xs:element name="songs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="song" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="song">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="albumImage" type="xs:string"/>
+        <xs:element name="songTitle" type="xs:string" />
+        <xs:element name="artist" type="xs:string" />
+        <xs:element name="featuredArtist" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="album" type="xs:string" />
+        <xs:element name="year" type="xs:integer" />
+        <xs:element name="genre" type="xs:string" />
+        <xs:element name="director" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="producer" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="length" type="xs:string" />
+        <xs:element ref="writers" />
+        <xs:element name="award" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="studio" minOccurs="0" maxOccurs="1" />
+        <xs:element name="rLabel" type="xs:string" />
+      </xs:sequence>
+
+      <xs:attribute name="song_id" type="xs:ID" />
+      <xs:attribute ref="format" />
+      <xs:attribute name="language" />
+      <xs:attribute ref="rating" />
+      <xs:attribute name="price" type="xs:decimal" />
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Studio Element -->
+  <xs:element name="studio">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="location" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Writers element -->
+  <xs:element name="writers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="writer" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Is the song in digital or physical format -->
+  <xs:attribute name="format">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="digital" />
+        <xs:enumeration value="physical" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+
+  <!-- Rating of the song between 0 and 5 -->
+  <xs:attribute name="rating">
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="0" />
+        <xs:maxInclusive value="5" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+
+</xs:schema>
